@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of Y S Chandrashekar - Engineering Graduate | Java, Python & SQL Developer. Specializing in Machine Learning, AI-based applications, and full-stack development.">
+  <meta name="keywords" content="Y S Chandrashekar, Software Developer, Java Developer, Python Developer, Machine Learning, AI, SQL, Portfolio">
+  <meta name="author" content="Y S Chandrashekar">
+  <title>Y S Chandrashekar — Software Developer | Java, Python & Machine Learning</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050914'/%3E%3Ctext x='50' y='66' font-family='sans-serif' font-size='42' font-weight='800' fill='%2300f2fe' text-anchor='middle'%3EYSC%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADING ANIMATION OVERLAY -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-box">
+      <div class="loader-spinner"></div>
+      <div class="loader-logo">YSC<span>_</span></div>
+      <p class="loader-text">Loading portfolio experience...</p>
+    </div>
+  </div>
+
+  <!-- PARTICLES BACKGROUND CANVAS -->
+  <canvas id="particles-canvas" class="particles-bg"></canvas>
+
+  <!-- SCROLL PROGRESS INDICATOR -->
+  <div id="scroll-progress"></div>
+
+  <!-- HEADER & STICKY NAVIGATION BAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-dot"></span>
+        YSC<span>_</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark / Light Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <a href="assets/resume.pdf" download="Y_S_Chandrashekar_Resume.pdf" class="btn btn-primary btn-sm nav-cta">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Resume
+        </a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Mobile Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. HOME / HERO SECTION -->
+  <section class="hero-section" id="home">
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <!-- Left Content -->
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span> OPEN FOR SOFTWARE & AI/ML ROLES
+          </div>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="gradient-text">Y S Chandrashekar</span>
+          </h1>
+
+          <h2 class="hero-title">
+            Software Developer <span class="divider">|</span> Machine Learning Enthusiast
+          </h2>
+
+          <div class="typing-container">
+            <span class="typing-prefix">Specialized in</span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-intro">
+            Results-driven Engineering graduate with strong skills in Java, Python, SQL, and Machine Learning. Experienced in building AI-based and database-driven applications using modern development tools and technologies.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="assets/resume.pdf" download="Y_S_Chandrashekar_Resume.pdf" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://linkedin.com/in/ys-chandra-shekar-7077b1373" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="mailto:ys.chandrashekhar5555@gmail.com" aria-label="Email" class="social-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            </a>
+            <a href="tel:+919611124060" aria-label="Phone" class="social-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Profile Image -->
+        <div class="hero-visual-wrapper">
+          <div class="profile-card">
+            <div class="profile-glow"></div>
+            <div class="profile-img-container">
+              <img src="images/profile.jpg" alt="Y S Chandrashekar" class="profile-img" onerror="this.src='Pass Photo1.jpg'">
+            </div>
+            <div class="profile-card-footer">
+              <div class="profile-title-tag">Y S Chandrashekar</div>
+              <div class="profile-loc">📍 Bengaluru, Karnataka</div>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="floating-chip chip-1">
+              <div class="chip-icon">☁</div>
+              <div>
+                <strong>Google Cloud Certified</strong>
+                <span>Google Cloud Skill Boost</span>
+              </div>
+            </div>
+
+            <div class="floating-chip chip-2">
+              <div class="chip-icon">🤖</div>
+              <div>
+                <strong>AI & Machine Learning</strong>
+                <span>Java, Python & SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT ME SECTION -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">01. GET TO KNOW ME</span>
+        <h2 class="main-title">About <span class="gradient-text">Me</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Content -->
+        <div class="about-content reveal">
+          <h3 class="about-heading">Building AI-based applications & reliable software.</h3>
+          
+          <p class="about-text">
+            I am a results-driven Engineering graduate from <b>Bangalore Institute of Technology</b> with strong skills in <b>Java, Python, SQL, and Machine Learning</b>.
+          </p>
+
+          <p class="about-text">
+            I have experience building AI-based and database-driven applications using modern development tools and technologies, backed by strong problem-solving, leadership, and analytical abilities gained through academic projects, cloud tools, and full-stack development.
+          </p>
+
+          <div class="personal-info-grid">
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">Y S Chandrashekar</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Degree:</span>
+              <span class="info-value">Bachelor of Engineering</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-value">ys.chandrashekhar5555@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Phone:</span>
+              <span class="info-value">+91 9611124060</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Location:</span>
+              <span class="info-value">Bengaluru, Karnataka</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">LinkedIn:</span>
+              <span class="info-value">ys-chandra-shekar-7077b1373</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Counter Statistics -->
+        <div class="stats-grid reveal">
+          <div class="stat-card glass-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-number" data-target="8.5">0</div>
+            <div class="stat-label">B.E. CGPA (BIT)</div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon">📜</div>
+            <div class="stat-number" data-target="9.35">0</div>
+            <div class="stat-label">Diploma CGPA</div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon">🚀</div>
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+
+          <div class="stat-card glass-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SKILLS SECTION -->
+  <section class="section bg-alt" id="skills">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">02. TECHNICAL PROFICIENCY</span>
+        <h2 class="main-title">Skills & <span class="gradient-text">Technologies</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="skills-category-grid">
+
+        <!-- Category: Programming Languages -->
+        <div class="skill-category-card glass-card reveal">
+          <div class="category-header">
+            <div class="category-icon">&lt;/&gt;</div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-tags-group">
+            <div class="st-item"><span>☕</span> Java</div>
+            <div class="st-item"><span>🐍</span> Python</div>
+            <div class="st-item"><span>🗄</span> SQL</div>
+            <div class="st-item"><span>🌐</span> HTML</div>
+            <div class="st-item"><span>🎨</span> CSS</div>
+          </div>
+        </div>
+
+        <!-- Category: Database & OS -->
+        <div class="skill-category-card glass-card reveal">
+          <div class="category-header">
+            <div class="category-icon">🗄</div>
+            <h3>Database & Operating System</h3>
+          </div>
+          <div class="skill-tags-group">
+            <div class="st-item"><span>🛢</span> MySQL</div>
+            <div class="st-item"><span>🐧</span> Linux</div>
+          </div>
+        </div>
+
+        <!-- Category: Tools & Platforms -->
+        <div class="skill-category-card glass-card reveal">
+          <div class="category-header">
+            <div class="category-icon">🛠</div>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-tags-group">
+            <div class="st-item"><span>🔧</span> Git</div>
+            <div class="st-item"><span>🐙</span> GitHub</div>
+            <div class="st-item"><span>☁</span> AWS</div>
+            <div class="st-item"><span>♾</span> DevOps</div>
+            <div class="st-item"><span>📊</span> Streamlit</div>
+            <div class="st-item"><span>🎨</span> Canva</div>
+          </div>
+        </div>
+
+        <!-- Category: Core Competencies -->
+        <div class="skill-category-card glass-card reveal">
+          <div class="category-header">
+            <div class="category-icon">🎯</div>
+            <h3>Core Competencies</h3>
+          </div>
+          <div class="skill-tags-group">
+            <div class="st-item"><span>🧩</span> Problem Solving</div>
+            <div class="st-item"><span>🧭</span> Leadership</div>
+            <div class="st-item"><span>⚖</span> Decision Making</div>
+            <div class="st-item"><span>🤝</span> Team Collaboration</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. EXPERIENCE SECTION -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">03. CAREER TIMELINE</span>
+        <h2 class="main-title">Experience & <span class="gradient-text">Internships</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-box reveal">
+          <div class="timeline-icon">💼</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-badge">Feb 2026 – May 2026</span>
+            <h3 class="timeline-role">Data Science Intern</h3>
+            <h4 class="timeline-company">Take It Smart</h4>
+            <p class="timeline-desc">
+              Completed a hands-on Data Science internship, gaining practical experience applying Python, SQL, and Machine Learning to real-world data-driven tasks.
+            </p>
+            <div class="timeline-tech">
+              <span>Python</span><span>SQL</span><span>Machine Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-box reveal">
+          <div class="timeline-icon">⚙</div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-badge">Academic Projects</span>
+            <h3 class="timeline-role">AI & Full-Stack Application Developer</h3>
+            <h4 class="timeline-company">Bangalore Institute of Technology</h4>
+            <p class="timeline-desc">
+              Built an AI-based career guidance and job recommendation platform, a database-driven doctor appointment system, and a CNN-based handwriting recognition model as part of academic project work.
+            </p>
+            <div class="timeline-tech">
+              <span>Python</span><span>Java</span><span>SQL</span><span>MySQL</span><span>Streamlit</span><span>HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROJECTS SECTION -->
+  <section class="section bg-alt" id="projects">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">04. PORTFOLIO SHOWCASE</span>
+        <h2 class="main-title">Featured <span class="gradient-text">Projects</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filter-controls reveal">
+        <button class="filter-btn active" onclick="filterProjectCards('all', this)">All Projects</button>
+        <button class="filter-btn" onclick="filterProjectCards('ai', this)">AI & ML</button>
+        <button class="filter-btn" onclick="filterProjectCards('web', this)">Web & Software</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: AI Career Guidance -->
+        <div class="project-card glass-card reveal" data-category="ai">
+          <div class="project-img-box">
+            <img src="images/project-ai.svg" alt="AI Career Guidance System" loading="lazy">
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('ai')">Live Interactive Demo</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">AI-Based Career Guidance & Job Recommendation</h3>
+            <p class="project-desc">
+              A recommendation platform that provides career and job recommendations based on user profiles and interests, built using Python, SQL, HTML, CSS, Streamlit, and Machine Learning.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>SQL</span><span>HTML/CSS</span><span>Streamlit</span><span>Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('ai')">Live Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Doctor Appointment System -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-box">
+            <img src="images/project-doctor.svg" alt="Doctor Appointment System" loading="lazy">
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('doctor')">Booking Demo</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Doctor Appointment System</h3>
+            <p class="project-desc">
+              A database-driven appointment management system with patient scheduling and notification functionality, built using HTML, CSS, JavaScript, and SQL.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('doctor')">Live Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Handwriting Recognition with CNN -->
+        <div class="project-card glass-card reveal" data-category="ai">
+          <div class="project-img-box">
+            <img src="images/project-ai.svg" alt="Handwriting Recognition with CNN" loading="lazy">
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('cnn')">Model Overview</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Handwriting Recognition with CNN</h3>
+            <p class="project-desc">
+              A deep learning model using Convolutional Neural Networks (CNN) and Python to classify handwritten characters with improved recognition accuracy.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>CNN</span><span>Deep Learning</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('cnn')">Live Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Portfolio Website -->
+        <div class="project-card glass-card reveal" data-category="web">
+          <div class="project-img-box">
+            <img src="images/project-portfolio.svg" alt="Personal Portfolio Website" loading="lazy">
+            <div class="project-overlay">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('portfolio')">View Features</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-title">Personal Portfolio Website</h3>
+            <p class="project-desc">
+              This responsive personal portfolio, built with Vanilla HTML, CSS, and JavaScript, featuring canvas particles, a dark/light theme switcher, and smooth animations.
+            </p>
+            <div class="project-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-primary btn-sm" onclick="openDemoModal('portfolio')">Live Demo</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CERTIFICATIONS SECTION -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">05. VERIFIED CREDENTIALS</span>
+        <h2 class="main-title">Certifications & <span class="gradient-text">Badges</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="certifications-grid">
+
+        <!-- Cert 1 -->
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon-wrap">🤖</div>
+          <div class="cert-details">
+            <h3 class="cert-name">Artificial Intelligence and Machine Learning</h3>
+            <p class="cert-issuer">Megara Robotics Pvt. Ltd.</p>
+            <span class="cert-badge">AI & Machine Learning</span>
+          </div>
+        </div>
+
+        <!-- Cert 2 -->
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon-wrap">&lt;/&gt;</div>
+          <div class="cert-details">
+            <h3 class="cert-name">Data Structures and Algorithms</h3>
+            <p class="cert-issuer">Infosys Springboard</p>
+            <span class="cert-badge">Core Programming</span>
+          </div>
+        </div>
+
+        <!-- Cert 3 -->
+        <div class="cert-card glass-card reveal">
+          <div class="cert-icon-wrap">☁</div>
+          <div class="cert-details">
+            <h3 class="cert-name">Google Cloud Engineering Certificate</h3>
+            <p class="cert-issuer">Google Cloud Skill Boost</p>
+            <span class="cert-badge">Cloud Engineering</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. EDUCATION SECTION -->
+  <section class="section bg-alt" id="education">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">06. ACADEMIC BACKGROUND</span>
+        <h2 class="main-title">Education <span class="gradient-text">Qualifications</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="education-timeline">
+
+        <!-- B.E -->
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <span class="edu-year">Engineering Graduate</span>
+            <h3 class="edu-title">Bachelor of Engineering (B.E.)</h3>
+            <h4 class="edu-school">Bangalore Institute of Technology (BIT)</h4>
+            <p class="edu-score">CGPA: <span>8.5 / 10.0</span></p>
+          </div>
+        </div>
+
+        <!-- Diploma -->
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <span class="edu-year">Diploma</span>
+            <h3 class="edu-title">Diploma</h3>
+            <h4 class="edu-school">Sandur Polytechnic</h4>
+            <p class="edu-score">CGPA: <span>9.35 / 10.0</span></p>
+          </div>
+        </div>
+
+        <!-- X Standard -->
+        <div class="edu-item reveal">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <span class="edu-year">X Standard</span>
+            <h3 class="edu-title">X Standard</h3>
+            <h4 class="edu-school">Edala Manikyamma Kakateeya Residential School</h4>
+            <p class="edu-score">Percentage: <span>71.36%</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. ACHIEVEMENTS SECTION -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">07. HONORS & RECOGNITION</span>
+        <h2 class="main-title">Key <span class="gradient-text">Achievements</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card reveal">
+          <div class="achieve-trophy">🏆</div>
+          <div class="achieve-info">
+            <h3>Inter-Department Cricket Tournament Runner-Up</h3>
+            <p>Secured runner-up position in the Inter-Department Cricket Tournament, demonstrating teamwork and leadership under competitive pressure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">08. FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="main-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="faq-accordion reveal">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What roles are you actively looking for?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I am actively seeking entry-level roles as a Software Developer, Java/Python Developer, or AI/Machine Learning Engineer.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Are you open to relocation or remote positions?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, I am based in Bengaluru, Karnataka, and I am fully open to hybrid, onsite (pan-India/international), or remote opportunities.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>What technologies do you specialize in?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I specialize in Java, Python, SQL, and Machine Learning, with hands-on experience using AWS, Git/GitHub, Streamlit, and MySQL to build AI-based and database-driven applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. RESUME DOWNLOAD CTA BANNER -->
+  <section class="resume-cta-section bg-alt">
+    <div class="container">
+      <div class="resume-cta-card glass-card reveal">
+        <div class="cta-content">
+          <h2>Ready to review my full credentials?</h2>
+          <p>Download my updated resume PDF to see my detailed academic record, project architecture, and certification details.</p>
+        </div>
+        <a href="assets/resume.pdf" download="Y_S_Chandrashekar_Resume.pdf" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download PDF Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CONTACT SECTION -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title-wrap reveal">
+        <span class="sub-title">09. REACH OUT</span>
+        <h2 class="main-title">Contact <span class="gradient-text">Me</span></h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-wrap reveal">
+          <h3>Let's start a conversation.</h3>
+          <p>Whether you have a job opportunity, a cloud architecture query, or just want to say hi, my inbox is open!</p>
+
+          <div class="contact-details-list">
+            <!-- Phone -->
+            <div class="contact-detail-card glass-card" onclick="copyContactDetail('+91 9611124060', 'Phone number copied!')">
+              <div class="contact-icon-bg">📞</div>
+              <div>
+                <label>Phone / WhatsApp</label>
+                <p>+91 9611124060 <span class="copy-chip">Copy</span></p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-detail-card glass-card" onclick="copyContactDetail('ys.chandrashekhar5555@gmail.com', 'Email copied!')">
+              <div class="contact-icon-bg">✉</div>
+              <div>
+                <label>Email</label>
+                <p>ys.chandrashekhar5555@gmail.com <span class="copy-chip">Copy</span></p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-detail-card glass-card">
+              <div class="contact-icon-bg">📍</div>
+              <div>
+                <label>Location</label>
+                <p>Bengaluru, Karnataka, India</p>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-social-row">
+              <a href="https://linkedin.com/in/ys-chandra-shekar-7077b1373" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form glass-card reveal" onsubmit="handleFormSubmission(event)">
+          <h3>Send a Message</h3>
+
+          <div class="form-group">
+            <label for="form-name">Full Name *</label>
+            <input type="text" id="form-name" class="form-input" required placeholder="e.g. Rahul Sharma">
+          </div>
+
+          <div class="form-group">
+            <label for="form-email">Email Address *</label>
+            <input type="email" id="form-email" class="form-input" required placeholder="name@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject">Subject *</label>
+            <input type="text" id="form-subject" class="form-input" required placeholder="Job Opportunity / Consultation">
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Message *</label>
+            <textarea id="form-message" class="form-input" rows="5" required placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">YSC<span>_</span></span>
+        <p>Building AI-based applications & reliable software solutions.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/ys-chandra-shekar-7077b1373" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:ys.chandrashekhar5555@gmail.com" aria-label="Email">Email</a>
+        <a href="tel:+919611124060" aria-label="Phone">Phone</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Y S Chandrashekar. All rights reserved. Crafted with Vanilla HTML, CSS & JS.
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" onclick="scrollToTop()">
+    ↑
+  </button>
+
+  <!-- DEMO MODAL DIALOG -->
+  <div class="modal-backdrop" id="demo-modal" onclick="closeDemoModalOnBackdrop(event)">
+    <div class="modal-box glass-card">
+      <button class="modal-close" onclick="closeDemoModal()">✕</button>
+      <div id="modal-body-content"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-wrapper" id="toast-wrapper"></div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
